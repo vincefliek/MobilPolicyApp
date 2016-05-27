@@ -26,7 +26,7 @@ module.exports = ['$window', '$timeout', '$document',
       if ( $document[0].documentMode == 8 ) watchKeydownElem = $document; // IE8
 
       scope.submit = function() {
-        console.log( 'Form is sending: ' + angular.toJson(scope.invitationForm) );
+        // actions while sending form
       };
 
       scope.hideModal = function() {

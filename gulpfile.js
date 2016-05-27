@@ -56,8 +56,8 @@ gulp.task('clean-prod', function () {
 gulp.task('bower', function() {
   return gulp
     .src([
-      './app/bower_components/jquery*/*min.js',
-      './app/bower_components/bootstrap*/**/*min.js'
+      './app/bower_components/jquery/jquery.min.js',
+      './app/bower_components/bootstrap/dist/js/*min.js'
     ])
     .pipe(concat('components.min.js'))
     .pipe(gulp.dest( paths.build + 'js/' ));
@@ -148,7 +148,7 @@ gulp.task('minify-styl', function (done) {
 gulp.task('other-css', function() {
   return gulp
     .src([
-      './app/bower_components/bootstrap-3.3.6-dist/css/bootstrap.min.css',
+      './app/bower_components/bootstrap/dist/css/bootstrap.min.css',
       './app/bower_components/normalize-css/normalize.css'
     ])
     .pipe(gulp.dest( paths.build + 'css/' ));
