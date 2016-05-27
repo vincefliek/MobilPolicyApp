@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]>     <html xmlns:ng="http://angularjs.org" id="ng-app" lang="sv" data-ng-app="mobPolApp" class="no-js lte-ie7"> <![endif]-->
+<!--[if IE 8]>         <html xmlns:ng="http://angularjs.org" id="ng-app" lang="sv" data-ng-app="mobPolApp" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>         <html lang="sv" data-ng-app="mobPolApp" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="sv" data-ng-app="mobPolApp" class="no-js gt-ie9"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="HandheldFriendly" content="True">
+
+  <!-- SEO -->
+  <title>mobilPolicyApp</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="copyright" content="">
+
+
+  <!-- Favicon Icons -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon/apple-icon-180x180.png">
+
+  <!-- Stylesheets -->
+  <!-- build:bs-css -->
+  <link rel="stylesheet" href="bower_components/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+  <!-- endbuild -->
+  <!-- build:normalize-css -->
+  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+  <!-- endbuild -->
+  <!-- build:app-css --><!-- endbuild -->
+
+  <!--[if IE]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <![endif]-->
+  <!--[if !IE]> -->
+  <!-- build:mdrz --><script src="js/vendors/modernizr.min.js"></script><!-- endbuild -->
+  <!-- <![endif]-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <noscript>
+    <p class="js-disabled-warning">Javascript is disabled, please enable it to improve your experience.</p>
+  </noscript>
+  <!--[if lt IE 8]>
+  <p class="browser-upgrade-warning">You are using an <strong>outdated</strong> browser. Please <a
+          href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div data-ng-view data-mp-set-scroll-step></div>
+
+  <!-- build:components --><!-- endbuild -->
+  <!-- build:bundle --><!-- endbuild -->
+
+  <!-- polyfill for 'rem' units -->
+  <!--[if lt IE 9]>
+    <!-- build:rem --><script src="js/vendors/rem.js"></script><!-- endbuild -->
+  <![endif]-->
+  <!-- Selectivizr adds ONLY in lte IE 8 support for 19 CSS3 pseudo-classes, 2 pseudo-elements and every attribute selector -->
+  <!-- json3 - polyfill for serialization and parsing json -->
+  <!--[if (gte IE 6)&(lte IE 8)]>
+    <!-- build:slvzr --><script src="js/vendors/selectivizr-min.js"></script><!-- endbuild -->
+    <script  src="http://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+  <![endif]-->
+  <!-- polyfill for placeholders -->
+  <!--[if lte IE 9]>
+    <!-- build:placeholders --><script src="js/vendors/placeholders.min.js"></script><!-- endbuild -->
+  <![endif]-->
+</body>
+</html>
