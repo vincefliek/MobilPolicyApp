@@ -36,6 +36,11 @@
     "start": "gulp"
   },
   "dependencies": {
+    "angular": "~1.2.29",
+    "angular-route": "~1.2.29",
+    "angular-animate": "~1.2.29",
+    "angular-resource": "~1.2.29",
+    "angular-scroll": "1.0.0",
     "imagemin-optipng": "^5.1.0"
   }
 }
