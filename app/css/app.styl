@@ -122,7 +122,7 @@ body
   overflow-x hidden
   background-color #0ca200
 
-  @media only screen and (min-width: 768px)
+  @media (min-width: 768px)
     overflow-y hidden
 
     /.touchevents &
@@ -132,19 +132,31 @@ a
 a:link
 a:hover
 a:active
-  text-decoration: none;
+  // hack: respond.js overrides :hover/:focus
+  // with inline styles in head tag
+  @media (min-width: 1px)
+    text-decoration: none;
 
 a:focus
-  outline: none;
-  text-decoration: underline;
+  // hack: respond.js overrides :hover/:focus
+  // with inline styles in head tag
+  @media (min-width: 1px)
+    outline: none;
+    text-decoration: underline;
 
 a:visited
-  outline: none;
-  color lighten(#23527c, 40%)
-  text-decoration: underline;
+  // hack: respond.js overrides :hover/:focus
+  // with inline styles in head tag
+  @media (min-width: 1px)
+    outline: none;
+    color lighten(#23527c, 40%)
+    text-decoration: underline;
 
 button:focus
-  outline: none;
+  // hack: respond.js overrides :hover/:focus
+  // with inline styles in head tag
+  @media (min-width: 1px)
+    outline: none;
 
 h1
   em(44, 14, 1.42857143)
@@ -162,10 +174,10 @@ a
 
 /*according to PSD template max width should be 970px without gutter*/
 .container
-  @media only screen and (min-width: 992px)
+  @media (min-width: 992px)
     width 1000px
 
-  @media only screen and (min-width: 1200px)
+  @media (min-width: 1200px)
     width 1000px
 
 .margins-off
@@ -231,9 +243,12 @@ menuItemActiveColor = #000
 
     > a
       &:focus
-        outline auto
+        // hack: respond.js override :hover/:focus
+        // with inline styles in head tag
+        @media (min-width: 1px)
+          outline auto
 
-    @media only screen and (min-width: 768px)
+    @media (min-width: 768px)
       height 70px
       display inline-block
 
@@ -249,7 +264,7 @@ menuItemActiveColor = #000
   vertical-align bottom
   background-color #023400
 
-  @media only screen and (max-width: 767px)
+  @media (max-width: 767px)
     display none
 
   &:before
@@ -264,12 +279,12 @@ menuItemActiveColor = #000
 .menu-fixed__nav
   em(16, 14, 1.25)
 
-  @media only screen and (min-width: 768px)
+  @media (min-width: 768px)
     display inline-block
     vertical-align bottom
     em(14, 14, 1.25)
 
-  @media only screen and (min-width: 992px)
+  @media (min-width: 992px)
     em(16, 14, 1.25)
 
 .navbar-collapse
@@ -283,7 +298,7 @@ menuItemActiveColor = #000
     border-color transparent
     box-shadow none
 
-  @media only screen and (max-width: 767px)
+  @media (max-width: 767px)
     background-color: menuItemBgColor;
 
     .navbar-brand
@@ -293,7 +308,7 @@ menuItemActiveColor = #000
   padding: 5px 0
 
 .navbar-brand
-  @media only screen and (min-width: 768px)
+  @media (min-width: 768px)
     display none
 
 .navbar-nav
@@ -309,15 +324,15 @@ menuItemActiveColor = #000
       margin 0 2px 0 0
       display: block;
 
-      @media only screen and (max-width: 767px)
+      @media (max-width: 767px)
         margin 0
 
-      @media only screen and (min-width: 768px)
+      @media (min-width: 768px)
         display: inline-block;
         vertical-align bottom
 
     &__item--4
-      @media only screen and (max-width: 767px)
+      @media (max-width: 767px)
         display none
 
 .nav > .menu-fixed__item > .menu-fixed
@@ -333,11 +348,14 @@ menuItemActiveColor = #000
     text-decoration: none;
     text-align center
 
-    &:hover
-    &:focus
-      color: #11c300;
+    // hack: respond.js overrides :hover/:focus
+    // with inline styles in head tag
+    @media (min-width: 1px)
+       &:hover
+       &:focus
+        color: #11c300;
 
-    @media only screen and (min-width: 768px) and (max-width: 991px)
+    @media (min-width: 768px) and (max-width: 991px)
       padding 0 10px
 
   &__item-link--empty
@@ -365,7 +383,7 @@ menuItemActiveColor = #000
   width 15px
   height arrowBlockHeight
 
-  @media only screen and (max-width: 767px)
+  @media (max-width: 767px)
     display none
 
   &__top-right
@@ -387,7 +405,7 @@ menuItemActiveColor = #000
   width 15px
   height arrowBlockHeight
 
-  @media only screen and (max-width: 767px)
+  @media (max-width: 767px)
     display none
 
   &__top-left
@@ -412,7 +430,7 @@ menuItemActiveColor = #000
   border-top 20px solid transparent
   border-bottom 20px solid transparent
 
-  @media only screen and (max-width: 767px)
+  @media (max-width: 767px)
     display none
 /* end all arrows */
 
@@ -421,7 +439,7 @@ menuItemActiveColor = #000
   &-aft
     margin 0 17px 0 0
 
-    @media only screen and (max-width: 767px)
+    @media (max-width: 767px)
       margin 0
 
 
@@ -442,14 +460,14 @@ calcPerc(currentInPx, inRatioToNum)
   position relative
   padding 100px 0 30px
 
-  @media only screen and (max-width: 767px)
+  @media (max-width: 767px)
     padding 50px 0 80px
 
   &__heading
     padding-top 78px
     padding-bottom 13px
 
-    @media only screen and (max-width: 767px)
+    @media (max-width: 767px)
       em(35, 14, 1)
 
   &__hero
@@ -461,7 +479,7 @@ calcPerc(currentInPx, inRatioToNum)
     max-width calcPerc(418, 970)
     max-height calcPerc(523, 757)
 
-    @media only screen and (max-width: 767px)
+    @media (max-width: 767px)
       display none
 
   &__splash
@@ -472,7 +490,7 @@ calcPerc(currentInPx, inRatioToNum)
     max-width calcPerc(191, 757)
     max-height calcPerc(155, 757)
 
-    @media only screen and (max-width: 767px)
+    @media (max-width: 767px)
       display none
 
 .btn-next-block
@@ -495,7 +513,7 @@ calcPerc(currentInPx, inRatioToNum)
 .outer-steps-block
   background #002000 url("../img/steps-block_top-bg.png") no-repeat scroll center top
 
-  @media only screen and (min-width: 1600px)
+  @media (min-width: 1600px)
     background-size contain
 
     /.no-backgroundsize &
@@ -510,24 +528,24 @@ calcPerc(currentInPx, inRatioToNum)
    * it sets the last value from top,
    * so that version of IE should be specified */
 
-  @media only screen and (max-width: 767px)
+  @media (max-width: 767px)
     padding 50px 0 80px
 
     /.ie9 &
     /.gt-ie9 &
       rem(14)
 
-  @media only screen and (min-width: 768px) and (max-width: 991px) and (max-height: 700px)
+  @media (min-width: 768px) and (max-width: 991px) and (max-height: 700px)
     /.ie9 &
     /.gt-ie9 &
       rem(9)
 
-  @media only screen and (min-width: 768px) and (max-width: 991px) and (max-height: 849px)
+  @media (min-width: 768px) and (max-width: 991px) and (max-height: 849px)
     /.ie9 &
     /.gt-ie9 &
       rem(11)
 
-  @media only screen and (min-width: 992px) and (min-height: 850px)
+  @media (min-width: 992px) and (min-height: 850px)
     /.ie9 &
     /.gt-ie9 &
       rem(14)
@@ -537,7 +555,7 @@ calcPerc(currentInPx, inRatioToNum)
     padding-bottom 50px
     letter-spacing 1.4px
 
-    @media only screen and (max-width: 767px)
+    @media (max-width: 767px)
       em(35, 14, 1)
 
   div.steps-block__step
@@ -609,7 +627,7 @@ calcPerc(currentInPx, inRatioToNum)
   .btn-next-block
     border-top 34px solid #034200
 
-    @media only screen and (max-width: 767px)
+    @media (max-width: 767px)
       bottom 2%
 
 /*----------------------------------------*/
@@ -629,7 +647,7 @@ invitationOpenBtnColor = #0086ff
   rem()
   background url("../img/bjud_in.png") no-repeat (calcPerc(860, 970))% 157px
 
-  @media only screen and (max-width: 767px)
+  @media (max-width: 767px)
     padding 50px 0 80px
     background none
 
@@ -638,7 +656,7 @@ invitationOpenBtnColor = #0086ff
     padding-bottom 11px
     letter-spacing 1.25px
 
-    @media only screen and (max-width: 767px)
+    @media (max-width: 767px)
       em(35, 14, 1)
 
   &__btn
@@ -652,10 +670,14 @@ invitationOpenBtnColor = #0086ff
     text-align center
 
     &:focus
-      background-color darken(invitationOpenBtnColor, 20%)
+      // hack: respond.js override :hover/:focus
+      // with inline styles in head tag
+      @media (min-width: 1px)
+        background-color darken(invitationOpenBtnColor, 20%)
 
       &:after
-        border-left 9px solid darken(invitationOpenBtnColor, 20%)
+        @media (min-width: 1px)
+          border-left 9px solid darken(invitationOpenBtnColor, 20%)
 
     &:after
       content ""
@@ -758,7 +780,7 @@ invitationOpenBtnColor = #0086ff
     background-color: rgba(#000, .2);
     iebgrgba("33000000")
 
-    @media only screen and (max-width: 767px)
+    @media (max-width: 767px)
       background-color: rgba(#000, .85);
 /* end styles for modal directive */
 
@@ -797,8 +819,11 @@ invitationOpenBtnColor = #0086ff
   border 1px solid transparent
 
   &:focus
-    outline none
-    border 1px solid #0086ff
+    // hack: respond.js override :hover/:focus
+    // with inline styles in head tag
+    @media (min-width: 1px)
+      outline none
+      border 1px solid #0086ff
 
 .invitation-block__btn
   &--modal

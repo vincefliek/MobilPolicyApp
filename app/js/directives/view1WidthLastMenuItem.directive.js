@@ -48,7 +48,7 @@ module.exports = ['$window', '$timeout',
 
         // outerWidth(true) calculation time is different in each browser,
         // so this timeout is needed to calculate proper widths
-      }, 60);
+      }, 200);
 
       function calcWidth() {
         // reset width for new calculating in this fn
