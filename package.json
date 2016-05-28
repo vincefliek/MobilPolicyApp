@@ -30,11 +30,6 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
-  "scripts": {
-    "postinstall": "bower install",
-    "prestart": "npm install",
-    "start": "gulp"
-  },
   "dependencies": {
     "angular": "~1.2.29",
     "angular-route": "~1.2.29",
@@ -42,5 +37,10 @@
     "angular-resource": "~1.2.29",
     "angular-scroll": "1.0.0",
     "imagemin-optipng": "^5.1.0"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "gulp"
   }
 }
