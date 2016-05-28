@@ -24,8 +24,16 @@ The development version will be created in 'dev' folder. The App will be opened 
 browser and should be available at the following url:
 
 [http://localhost:8000/dev/index.html](http://localhost:8000/dev/index.html)
-    
+
+If you'd like to re-build development version (for any reason), please clean the 'dev' folder
+before this (it prevents unnecessary gulp errors) by running:
+
+    gulp clean
+
 Production version will be created after running the following command:
 
     gulp prod
 
+Before re-build of production version again it is necessary to clean 'prod' folder. Just launch:
+
+    gulp clean-prod
